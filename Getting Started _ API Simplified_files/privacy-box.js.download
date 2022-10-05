@@ -1,0 +1,36 @@
+(function($) {
+
+    'use strict';
+
+    const CNAME = 'Privacy-Policy-Box-Hidden';
+
+    $(document).ready(function() {
+        const privacyPolicyBoxHidden = getCookie(CNAME) ? true : false;
+        $(".privacy-popup").css('display', privacyPolicyBoxHidden ? 'none' : 'flex');
+        $("#showPrivacyPolicyModal").click(function() {
+            showPrivacyPolicyModal();
+        });
+        
+        $("#hidePrivacyPolicyBox").click(function() {
+            setCookie(CNAME);
+            $(".privacy-popup").css('display', 'none');
+        });
+
+        $(".close-privacy-policy-modal").click(function() {
+            hidePrivacyPolicyModal();
+        });
+
+        function showPrivacyPolicyModal() {
+            $("#privacy-policy-modal").css('display', 'block');
+            $("#privacy-policy-backdrop-modal").css('display', 'block');
+            $("#privacy-policy-modal").css('opacity', '1');
+        }
+
+        function hidePrivacyPolicyModal() {
+            $("#privacy-policy-modal").css('display', 'none');
+            $("#privacy-policy-backdrop-modal").css('display', 'none');
+            $("#privacy-policy-modal").css('opacity', '0');
+        }
+
+    });
+}(jQuery));

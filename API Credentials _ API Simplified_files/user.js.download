@@ -1,0 +1,57 @@
+(function($) {
+
+    'use strict';
+
+    $(document).ready(function() {
+
+        let managementApiUrl = "";
+        let managementApiVersion = "";
+        const accessToken = localStorage.getItem("accessToken");
+        var baseUrl = window.location.origin;
+
+        $.ajax({
+            url: baseUrl + "/config.json",
+            type: "GET",
+            dataType: "JSON",
+            success: function (data) {
+                console.log(data);
+                managementApiUrl = data.managementApiUrl;
+                managementApiVersion = data.managementApiVersion;
+                identify();
+            }
+        });
+        
+        function identify() {
+            $.ajax({
+                url: managementApiUrl + "/identity?api-version=" + managementApiVersion,
+                headers: {"Authorization": accessToken},
+                type: "GET",
+                dataType: "JSON",
+                success: function (data) {
+                    console.log(data);
+                    getCurrentUser(data.id);
+                }
+            });
+        }
+
+        function getCurrentUser(userId) {
+            $.ajax({
+                url: managementApiUrl + "/users/" + userId + "?api-version=" + managementApiVersion,
+                headers: {"Authorization": accessToken},
+                type: "GET",
+                dataType: "JSON",
+                success: function (data) {
+                    console.log(data);
+                    if (data.properties) {
+                        const firstName = data.properties.firstName;
+                        const lastName = data.properties.lastName;
+                        const email = data.properties.email;
+                        $(".firstNameVal").text(firstName);
+                        $(".lastNameVal").text(lastName);
+                        $(".userEmailVal").text(email);
+                    }
+                }
+            });
+        }
+    });
+}(jQuery));

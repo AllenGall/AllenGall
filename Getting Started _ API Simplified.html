@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://developers-stg.ladsmark.com/docs/getting-started/ -->
+<html lang="en" class="no-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.80.0"><meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+
+
+<link rel="shortcut icon" href="https://developers-stg.ladsmark.com/favicon.ico">
+
+<title>Getting Started | API Simplified</title><meta property="og:title" content="Getting Started">
+<meta property="og:description" content="Get started quickly by creating a payment in the sandbox, review in the test environment, then send to production.
+">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/docs/getting-started/">
+<meta property="article:published_time" content="2021-06-01T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-06-01T00:00:00+00:00"><meta property="og:site_name" content="API Simplified">
+<meta itemprop="name" content="Getting Started">
+<meta itemprop="description" content="Get started quickly by creating a payment in the sandbox, review in the test environment, then send to production.
+">
+<meta itemprop="dateModified" content="2021-06-01T00:00:00+00:00">
+<meta itemprop="wordCount" content="1315">
+
+
+
+<meta itemprop="keywords" content="">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Getting Started">
+<meta name="twitter:description" content="Get started quickly by creating a payment in the sandbox, review in the test environment, then send to production.
+">
+
+
+
+
+
+<link rel="preload" href="./Getting Started _ API Simplified_files/main.min.609b1cd49a3390399d876b0e3074da0777ef749a278e0aebb981d966d2a10582.css" as="style">
+<link href="./Getting Started _ API Simplified_files/main.min.609b1cd49a3390399d876b0e3074da0777ef749a278e0aebb981d966d2a10582.css" rel="stylesheet" integrity="">
+
+
+<script src="./Getting Started _ API Simplified_files/jquery-3.5.1.min.js.download" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+<script src="./Getting Started _ API Simplified_files/lunr.min.js.download" integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY" crossorigin="anonymous"></script>
+
+
+
+
+  <script async="" src="./Getting Started _ API Simplified_files/51d05707-7d9f-4ddf-b0ea-00ed07040ca7"></script></head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+	<div class="flex container-xl">
+		<a class="navbar-brand" href="https://developers-stg.ladsmark.com/">
+				<img src="./Getting Started _ API Simplified_files/Logo.svg" alt="Logo">
+		</a>
+		<div class="collapsible-container">
+			<div class="collapsible collapsible-panel flex" id="main_collapse">
+				<div class="backdrop"></div>
+				<div class="collapsible-content flex" id="main_navbar">
+					<ul class="navbar-nav">
+						
+						
+						<li class="nav-item">
+							
+							
+							
+							
+							<a class="nav-link" href="https://developers-stg.ladsmark.com/apis"><span>API</span></a>
+						</li>
+						
+						<li class="nav-item">
+							
+							
+							
+							
+							<a class="nav-link active" href="https://developers-stg.ladsmark.com/docs/"><span class="active">Documentation</span></a>
+						</li>
+						
+						<li class="nav-item">
+							
+							
+							
+							
+							<a class="nav-link" href="https://developers-stg.ladsmark.com/support/"><span>Support</span></a>
+						</li>
+						
+						<li class="nav-item">
+							
+							
+							
+							
+							<a class="nav-link" href="https://developers-stg.ladsmark.com/profile"><span>Manage your Onbe account</span></a>
+						</li>
+						
+						<li class="nav-item">
+							
+							
+							
+							
+							<a class="nav-link" href="https://developers-stg.ladsmark.com/apis/#signout"><span>Sign Out</span></a>
+						</li>
+						
+						
+						
+					</ul>
+					<div class="dropdown show flex user-profile-dropdown">
+						<div class="flex align-items-center" href="#" role="button" id="dropdownUserMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<div class="flex flex-column flex-1 align-items-end" style="margin-right: 12px;">
+								<div class="user-name text-truncate full-width" style="text-align: right;">
+									<span class="firstNameVal"></span>
+									<span class="lastNameVal"></span>
+								</div>
+								<div class="user-email text-truncate full-width userEmailVal" style="text-align: right;"></div>
+							</div>
+							<div class="flex">
+								<img src="./Getting Started _ API Simplified_files/User-Gold.svg" alt="Icon" width="32" height="32">
+							</div>
+						</div>
+						<div class="dropdown-menu" aria-labelledby="dropdownUserMenu">
+							<div class="flex flex-column">
+								<div class="flex flex-column" style="padding: 20px;">
+									<div class="flex justify-content-center" style="margin-bottom: 5px;">
+										<img src="./Getting Started _ API Simplified_files/User-Gold.svg" alt="Icon" width="44">
+									</div>
+									<div class="user-name text-truncate">
+										<span class="firstNameVal"></span>
+										<span class="lastNameVal"></span>
+									</div>
+									<div class="user-email text-truncate userEmailVal"></div>
+									<div style="margin-top: 12px;">
+										<a class="flex align-items-center a-manage-your-account text-truncate" href="https://developers-stg.ladsmark.com/profile">
+											Manage your Onbe account
+										</a>
+									</div>
+								</div>
+								<div class="sign-out-box">
+									<a class="a-sign-out text-truncate" href="https://developers-stg.ladsmark.com/apis/#signout">
+										Sign Out
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="collapsible-panel-close fas fa-times" id="btn-collapsible-panel-close" aria-label="Toggle" data-toggle="collapse" data-target="#main_collapse" aria-expanded="true"></button>
+				</div>
+			</div>
+			<button class="collapsible-panel-open fas fa-bars" id="btn-collapsible-panel-open" aria-label="Toggle" data-toggle="collapse" data-target="#main_collapse" aria-expanded="false"></button>
+		</div>
+	</div>
+</nav>
+
+<script defer="" language="javascript" type="text/javascript" src="./Getting Started _ API Simplified_files/user.js.download"></script>
+
+
+    </header>
+    <div class="container-fluid td-outer container-xl">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap" style="height: 100%;">
+          <div class="col-12 col-md-3 col-xl-3 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+
+
+
+<div class="td-search-input-wrapper">
+  <input type="search" class="form-control td-search-input" placeholder="Search documentation…" aria-label="Search documentation…" autocomplete="off" data-offline-search-index-json-src="/offline-search-index.61c81e8c97f31a00c6987d2e5b5ca871.json" data-offline-search-base-href="/" data-offline-search-max-results="10">
+  <div class="td-search-img-wrapper">
+    <img src="./Getting Started _ API Simplified_files/Search-Dark.svg" alt="Icon" width="18">
+  </div>
+</div>
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a href="https://developers-stg.ladsmark.com/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section"></a>
+  </li>
+  <ul>
+    <li class="collapse show" id="">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a href="https://developers-stg.ladsmark.com/docs/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Documentation</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docs">
+      
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page  active" id="m-docsgetting-started" href="https://developers-stg.ladsmark.com/docs/getting-started/">Getting Started</a>
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a href="https://developers-stg.ladsmark.com/docs/security/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Security</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docssecurity">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a href="https://developers-stg.ladsmark.com/docs/security/credentials/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Obtain Credentials</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docssecuritycredentials">
+      
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docssecuritycredentialsapi-credentials" href="https://developers-stg.ladsmark.com/docs/security/credentials/api-credentials/">API Credentials</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docssecuritycredentialsip-allowlisting" href="https://developers-stg.ladsmark.com/docs/security/credentials/ip-allowlisting/">IP Allowlisting</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docssecuritycredentialsproduction-certificates" href="https://developers-stg.ladsmark.com/docs/security/credentials/production-certificates/">Production Certificates</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docssecuritycredentialssandbox-api-credentials" href="https://developers-stg.ladsmark.com/docs/security/credentials/sandbox-api-credentials/">Sandbox API Credentials</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docssecuritytls" href="https://developers-stg.ladsmark.com/docs/security/tls/">TLS 1.2 Guidance</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a href="https://developers-stg.ladsmark.com/docs/environments/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Environments</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsenvironments">
+      
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsenvironmentsapi-explorer" href="https://developers-stg.ladsmark.com/docs/environments/api-explorer/">API Explorer</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsenvironmentssandbox" href="https://developers-stg.ladsmark.com/docs/environments/sandbox/">Sandbox</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsenvironmentstest" href="https://developers-stg.ladsmark.com/docs/environments/test/">Test</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsenvironmentsproduction" href="https://developers-stg.ladsmark.com/docs/environments/production/">Production</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a href="https://developers-stg.ladsmark.com/docs/rest/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">REST at Onbe</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsrest">
+      
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsrestendpoint-types" href="https://developers-stg.ladsmark.com/docs/rest/endpoint-types/">Endpoint Types</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsrestidempotency" href="https://developers-stg.ladsmark.com/docs/rest/idempotency/">Idempotency</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsrestobtaining-an-openapi-spec" href="https://developers-stg.ladsmark.com/docs/rest/obtaining-an-openapi-spec/">Obtaining an OpenAPI spec</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsrestapi-versioning" href="https://developers-stg.ladsmark.com/docs/rest/api-versioning/">API Versioning</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsrestsoap-transition" href="https://developers-stg.ladsmark.com/docs/rest/soap-transition/">Legacy SOAP Transition Guide</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a href="https://developers-stg.ladsmark.com/docs/errors/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Errors</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docserrors">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a href="https://developers-stg.ladsmark.com/docs/errors/status-codes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Status Codes</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docserrorsstatus-codes">
+      
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docserrorsstatus-codes2xx-codes" href="https://developers-stg.ladsmark.com/docs/errors/status-codes/2xx-codes/">2xx Status Codes</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docserrorsstatus-codes3xx-codes" href="https://developers-stg.ladsmark.com/docs/errors/status-codes/3xx-codes/">3xx Status Codes</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docserrorsstatus-codes4xx-codes" href="https://developers-stg.ladsmark.com/docs/errors/status-codes/4xx-codes/">4xx Status Codes</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docserrorsstatus-codes5xx-codes" href="https://developers-stg.ladsmark.com/docs/errors/status-codes/5xx-codes/">5xx Error Reference</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a href="https://developers-stg.ladsmark.com/docs/errors/validation-errors/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Validation Errors</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docserrorsvalidation-errors">
+      
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docserrorsvalidation-errorspaymentid_must_be_valid" href="https://developers-stg.ladsmark.com/docs/errors/validation-errors/paymentid_must_be_valid/">PaymentId must be valid</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docserrorstroubleshooting" href="https://developers-stg.ladsmark.com/docs/errors/troubleshooting/">Troubleshooting Guide</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a href="https://developers-stg.ladsmark.com/docs/reference/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Reference</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreference">
+      
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceenvironments" href="https://developers-stg.ladsmark.com/docs/reference/environments/">Summary of Environments</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+  
+  
+  
+  
+  
+  <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+  
+  
+  </div>
+
+
+
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="https://developers-stg.ladsmark.com/docs/getting-started/#api-key-and-authorization">API Key and Authorization</a></li>
+      </ul>
+    </li>
+    <li><a href="https://developers-stg.ladsmark.com/docs/getting-started/#payment-api-tutorial">Payment API tutorial</a>
+      <ul>
+        <li><a href="https://developers-stg.ladsmark.com/docs/getting-started/#step-1-create-a-payment-in-the-sandbox">Step 1: Create a payment in the sandbox</a></li>
+        <li><a href="https://developers-stg.ladsmark.com/docs/getting-started/#step-2-switch-to-the-test-environment">Step 2: Switch to the test environment</a></li>
+        <li><a href="https://developers-stg.ladsmark.com/docs/getting-started/#step-3-switch-to-the-production-environment">Step 3: Switch to the production environment</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+          </div>
+          <main class="col-12 col-md-9 col-xl-7 td-main-content pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+<li class="breadcrumb-item">
+	<a href="https://developers-stg.ladsmark.com/docs/">Documentation</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="https://developers-stg.ladsmark.com/docs/getting-started/">Getting Started</a>
+</li>
+
+	</ol>
+</nav>
+
+            
+<div class="td-content">
+	<h1>Getting Started</h1>
+    <div class="lead">Get started quickly by creating a payment in the sandbox, review in the test environment, then send to production.</div>
+	       
+	<p>This tutorial shows you how to
+use the Payment API to
+create a payment
+in the <a href="https://developers-stg.ladsmark.com/docs/environments/sandbox/">sandbox environment</a>.</p>
+<p>Complete these steps:</p>
+<ol>
+<li><a href="https://developers-stg.ladsmark.com/docs/getting-started/#step-1-create-a-payment-in-the-sandbox">Create a payment in the sandbox</a>.</li>
+<li><a href="https://developers-stg.ladsmark.com/docs/getting-started/#step-2-switch-to-the-test-environment">Switch to the test environment</a>.</li>
+<li><a href="https://developers-stg.ladsmark.com/docs/getting-started/#step-3-switch-to-the-production-environment">Switch to the production environment</a>.</li>
+</ol>
+<p>If you encounter any errors as you complete these steps, see our
+<a href="https://developers-stg.ladsmark.com/docs/errors/troubleshooting">troubleshooting guide</a>.</p>
+<h3 id="api-key-and-authorization">API Key and Authorization<a aria-hidden="true" href="https://developers-stg.ladsmark.com/docs/getting-started/#api-key-and-authorization" style="visibility: hidden;"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h3>
+<p>Please note that the sandbox and production environments have different security requirements. While a key is adequate for accessing the sandbox, test and production environments require a <a href="https://developers-stg.ladsmark.com/docs/security/credentials/api-credentials/">bearer token or certificate</a>.</p>
+<p><img src="./Getting Started _ API Simplified_files/tokencertificate.png" alt="Tokens and Certificates"></p>
+<h2 id="payment-api-tutorial">Payment API tutorial<a aria-hidden="true" href="https://developers-stg.ladsmark.com/docs/getting-started/#payment-api-tutorial" style="visibility: hidden;"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h2>
+<h3 id="step-1-create-a-payment-in-the-sandbox">Step 1: Create a payment in the sandbox<a aria-hidden="true" href="https://developers-stg.ladsmark.com/docs/getting-started/#step-1-create-a-payment-in-the-sandbox" style="visibility: hidden;"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h3>
+<p>All API calls must be authorized. 
+In this step of the tutorial your requests
+will be authorized using an API key that grants you access to
+the sandbox APIs.</p>
+<p>You may obtain your sandbox API key on your
+<a href="https://developers-stg.ladsmark.com/profile">profile page</a>.</p>
+<blockquote>
+<p>Later you’ll learn how to authorize your API calls in the test and live environments
+using OAuth 2.0 credentials or client certificates. Only the sandbox environment uses
+API keys.</p>
+</blockquote>
+
+<ul class="nav nav-tabs" id="createatokenexamples" role="tablist"><li class="nav-item"><a data-toggle="tab" class="nav-link active" href="https://developers-stg.ladsmark.com/docs/getting-started/#createatokenexamples-0" role="tab" aria-controls="createatokenexamples-0" aria-selected="true">HTTP</a></li>
+    
+    <li class="nav-item"><a data-toggle="tab" class="nav-link" href="https://developers-stg.ladsmark.com/docs/getting-started/#createatokenexamples-1" role="tab" aria-controls="createatokenexamples-1">Curl</a></li>
+    <li class="nav-item"><a data-toggle="tab" class="nav-link" href="https://developers-stg.ladsmark.com/docs/getting-started/#createatokenexamples-2" role="tab" aria-controls="createatokenexamples-2">C#</a></li>
+    <li class="nav-item"><a data-toggle="tab" class="nav-link" href="https://developers-stg.ladsmark.com/docs/getting-started/#createatokenexamples-3" role="tab" aria-controls="createatokenexamples-3">Java</a></li>
+    <li class="nav-item"><a data-toggle="tab" class="nav-link" href="https://developers-stg.ladsmark.com/docs/getting-started/#createatokenexamples-4" role="tab" aria-controls="createatokenexamples-4">JavaScript</a></li>
+    <li class="nav-item"><a data-toggle="tab" class="nav-link" href="https://developers-stg.ladsmark.com/docs/getting-started/#createatokenexamples-5" role="tab" aria-controls="createatokenexamples-5">PHP</a></li>
+    <li class="nav-item"><a data-toggle="tab" class="nav-link" href="https://developers-stg.ladsmark.com/docs/getting-started/#createatokenexamples-6" role="tab" aria-controls="createatokenexamples-6">Python</a></li>
+    <li class="nav-item"><a data-toggle="tab" class="nav-link" href="https://developers-stg.ladsmark.com/docs/getting-started/#createatokenexamples-7" role="tab" aria-controls="createatokenexamples-7">Ruby</a></li>
+    <li class="nav-item"><a data-toggle="tab" class="nav-link" href="https://developers-stg.ladsmark.com/docs/getting-started/#createatokenexamples-8" role="tab" aria-controls="createatokenexamples-8">Objective C</a></li></ul>
+<div class="tab-content" id="createatokenexamples"><div id="createatokenexamples-0" class="tab-pane show active" role="tabpanel" aria-labelledby="createatokenexamples-0">
+        
+            <p></p><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#000">POST</span> <span style="color:#000">https://sandbox-api.onbe.com/payment/v1pre/payments</span> <span style="color:#204a87;font-weight:bold">HTTP</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#0000cf;font-weight:bold">1.1</span>
+
+<span style="color:#000">Authorization: Bearer &lt; your sandbox token &gt;
+</span><span style="color:#000">Content-Type: application/json
+</span><span style="color:#000">Cache-Control: no-cache
+</span><span style="color:#000">
+</span><span style="color:#000">{
+</span><span style="color:#000">    "paymentId": "MyUniqueId000000000001",
+</span><span style="color:#000">    "amount": {
+</span><span style="color:#000">        "amount": "1",
+</span><span style="color:#000">        "currencyCode": "USA"
+</span><span style="color:#000">    },
+</span><span style="color:#000">    "issuanceProductId": "BTTF2IP0006",
+</span><span style="color:#000">    "locationId": "PROMOCODE",
+</span><span style="color:#000">    "endClientId": null,
+</span><span style="color:#000">    "recipient": {
+</span><span style="color:#000">        "participantId": "NLRTy3McrRPaASE8",
+</span><span style="color:#000">        "firstName": "Emmett",
+</span><span style="color:#000">        "lastName": "Brown",
+</span><span style="color:#000">        "address1": "1640 Riverside Drive",
+</span><span style="color:#000">        "address2": "",
+</span><span style="color:#000">        "city": "Hill Valley",
+</span><span style="color:#000">        "state": "CA",
+</span><span style="color:#000">        "postalCode": "91905",
+</span><span style="color:#000">        "countryCode": "USA",
+</span><span style="color:#000">        "emailAddress": "ebrown@symbolics.com",
+</span><span style="color:#000">        "language": "EN",
+</span><span style="color:#000">        "phoneNumber": "+19165554385"
+</span><span style="color:#000">    },
+</span><span style="color:#000">    "physicalCardOptions": {
+</span><span style="color:#000">        "carrierMessage1": "Welcome!",
+</span><span style="color:#000">        "carrierMessage2": "",
+</span><span style="color:#000">        "carrierMessage3": "",
+</span><span style="color:#000">        "fourthLineEmboss": "Generico Team Member"
+</span><span style="color:#000">    },
+</span><span style="color:#000">    "issuanceEmailOptions": {
+</span><span style="color:#000">        "distributionTemplateId": "DT82971",
+</span><span style="color:#000">        "emailMessage": "Welcome!"
+</span><span style="color:#000">    },
+</span><span style="color:#000">    "redemptionOptions": {
+</span><span style="color:#000">        "walletUserName": null,
+</span><span style="color:#000">        "redemptionMessage": null
+</span><span style="color:#000">    }
+</span><span style="color:#000">}
+</span></code></pre></div></div>
+        <div id="createatokenexamples-1" class="tab-pane" role="tabpanel" aria-labelledby="createatokenexamples-1">
+            
+            <p></p><pre><code class="language-curl" data-lang="curl">curl -v -X POST "https://dvp-apim-devportal-stg-westus2-001.azure-api.net/payment/v1pre/payments"
+-H "Authorization: Bearer &lt; your sandbox token &gt;"
+-H "Content-Type: application/json"
+-H "Cache-Control: no-cache"
+-H "X-Sandbox-Key: ffd2d443c69e4feea75764f3507bb828"
+--data-ascii "{
+    ^"paymentId^": ^"MyUniqueId000000000001^",
+    ^"amount^": {
+        ^"amount^": ^"1^",
+        ^"currencyCode^": ^"USA^"
+    },
+    ^"issuanceProductId^": ^"BTTF2IP0006^",
+    ^"locationId^": ^"PROMOCODE^",
+    ^"endClientId^": null,
+    ^"recipient^": {
+        ^"participantId^": ^"NLRTy3McrRPaASE8^",
+        ^"firstName^": ^"Emmett^",
+        ^"lastName^": ^"Brown^",
+        ^"address1^": ^"1640 Riverside Drive^",
+        ^"address2^": ^"^",
+        ^"city^": ^"Hill Valley^",
+        ^"state^": ^"CA^",
+        ^"postalCode^": ^"91905^",
+        ^"countryCode^": ^"USA^",
+        ^"emailAddress^": ^"ebrown@symbolics.com^",
+        ^"language^": ^"EN^",
+        ^"phoneNumber^": ^"+19165554385^"
+    },
+    ^"clientData^": {
+        ^"clientData1^": null,
+        ^"clientData2^": null,
+        ^"clientData3^": null,
+        ^"clientData4^": null,
+        ^"clientData5^": null,
+        ^"clientData6^": null,
+        ^"clientData7^": null,
+        ^"clientData8^": null,
+        ^"clientData9^": null,
+        ^"clientData10^": null
+    },
+    ^"physicalCardOptions^": {
+        ^"carrierMessage1^": ^"Welcome!^",
+        ^"carrierMessage2^": ^"^",
+        ^"carrierMessage3^": ^"^",
+        ^"fourthLineEmboss^": ^"Generico Team Member^"
+    },
+    ^"issuanceEmailOptions^": {
+        ^"distributionTemplateId^": ^"DT82971^",
+        ^"emailMessage^": ^"Welcome!^"
+    },
+    ^"redemptionOptions^": {
+        ^"walletUserName^": null,
+        ^"redemptionMessage^": null
+    }
+}"
+</code></pre></div>
+        <div id="createatokenexamples-2" class="tab-pane" role="tabpanel" aria-labelledby="createatokenexamples-2">
+            
+            <p></p><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#204a87;font-weight:bold">using</span> <span style="color:#000">Newtonsoft.Json</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#204a87;font-weight:bold">using</span> <span style="color:#000">System</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#204a87;font-weight:bold">using</span> <span style="color:#000">System.Net.Http</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#204a87;font-weight:bold">using</span> <span style="color:#000">System.Text</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#204a87;font-weight:bold">using</span> <span style="color:#000">System.Threading.Tasks</span><span style="color:#000;font-weight:bold">;</span>
+
+<span style="color:#204a87;font-weight:bold">namespace</span> <span style="color:#000">CSHttpClientSample</span>
+<span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">Program</span>
+    <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">async</span> <span style="color:#000">Task</span> <span style="color:#000">Main</span><span style="color:#000;font-weight:bold">()</span>
+        <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#204a87;font-weight:bold">await</span> <span style="color:#000">MakeRequest</span><span style="color:#000;font-weight:bold">();</span>
+            <span style="color:#000">Console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">WriteLine</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">"Hit ENTER to exit..."</span><span style="color:#000;font-weight:bold">);</span>
+            <span style="color:#000">Console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ReadLine</span><span style="color:#000;font-weight:bold">();</span>
+        <span style="color:#000;font-weight:bold">}</span>
+
+        <span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">async</span> <span style="color:#000">Task</span> <span style="color:#000">MakeRequest</span><span style="color:#000;font-weight:bold">()</span>
+        <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">sandboxKey</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"&lt;your key goes here&gt;"</span><span style="color:#000;font-weight:bold">;</span>
+            <span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">baseUrl</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"https://sandbox-api.onbe.com"</span><span style="color:#000;font-weight:bold">;</span>
+            <span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">uri</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">baseUrl</span> <span style="color:#000;font-weight:bold">+</span> <span style="color:#4e9a06">"/payment/v1pre/payments"</span><span style="color:#000;font-weight:bold">;</span>
+
+            <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">client</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">HttpClient</span><span style="color:#000;font-weight:bold">();</span>
+            <span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">DefaultRequestHeaders</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Add</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">"X-Sandbox-Key"</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">sandboxKey</span><span style="color:#000;font-weight:bold">);</span>
+
+            <span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">paymentId</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">Guid</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">NewGuid</span><span style="color:#000;font-weight:bold">().</span><span style="color:#000">ToString</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">"N"</span><span style="color:#000;font-weight:bold">);</span>
+
+            <span style="color:#8f5902;font-style:italic">// Request body
+</span><span style="color:#8f5902;font-style:italic"></span>            <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">body</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000;font-weight:bold">{</span>
+                <span style="color:#000">paymentId</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">paymentId</span><span style="color:#000;font-weight:bold">,</span>
+                <span style="color:#000">amount</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000;font-weight:bold">{</span>
+                    <span style="color:#000">amount</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"1"</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">currencyCode</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"USA"</span>
+                <span style="color:#000;font-weight:bold">},</span>
+                <span style="color:#000">issuanceProductId</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"BTTF2IP0006"</span><span style="color:#000;font-weight:bold">,</span>
+                <span style="color:#000">locationId</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"PROMOCODE"</span><span style="color:#000;font-weight:bold">,</span>
+                <span style="color:#000">endClientId</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">object</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+                <span style="color:#000">recipient</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000;font-weight:bold">{</span>
+                    <span style="color:#000">participantId</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"NLRTy3McrRPaASE8"</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">firstName</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"Emmett"</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">lastName</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"Brown"</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">address1</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"1640 Riverside Drive"</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">address2</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">object</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">city</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"Hill Valley"</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">state</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"CA"</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">postalCode</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"91905"</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">countryCode</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"USA"</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">emailAddress</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"ebrown@symbolics.com"</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">language</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"EN"</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">phoneNumber</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"+19165554385"</span>
+                <span style="color:#000;font-weight:bold">},</span>
+                <span style="color:#000">physicalCardOptions</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000;font-weight:bold">{</span>
+                    <span style="color:#000">carrierMessage2</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"Welcome!"</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">carrierMessage3</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">object</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">fourthLineEmboss</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"Generico Team Member"</span>
+                <span style="color:#000;font-weight:bold">},</span>
+                <span style="color:#000">issuanceEmailOptions</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000;font-weight:bold">{</span>
+                    <span style="color:#000">distributionTemplateId</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"DT82971"</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">emailMessage</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"Welcome!"</span>
+                <span style="color:#000;font-weight:bold">},</span>
+                <span style="color:#000">redemptionOptions</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000;font-weight:bold">{</span>
+                    <span style="color:#000">walletUserName</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">object</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+                    <span style="color:#000">redemptionMessage</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">object</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">null</span>
+                <span style="color:#000;font-weight:bold">}</span>
+            <span style="color:#000;font-weight:bold">};</span>
+
+            <span style="color:#204a87;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">content</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">StringContent</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">JsonConvert</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">SerializeObject</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">body</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">Encoding</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">UTF8</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">"application/json"</span><span style="color:#000;font-weight:bold">))</span>
+            <span style="color:#000;font-weight:bold">{</span>
+                <span style="color:#000">HttpResponseMessage</span> <span style="color:#000">response</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">await</span> <span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">PostAsync</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">uri</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">content</span><span style="color:#000;font-weight:bold">);</span>
+                <span style="color:#000">Console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">WriteLine</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">$"Status Code: {response.StatusCode}"</span><span style="color:#000;font-weight:bold">);</span>
+            <span style="color:#000;font-weight:bold">}</span>
+        <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div></div>
+        <div id="createatokenexamples-3" class="tab-pane" role="tabpanel" aria-labelledby="createatokenexamples-3">
+            
+            <p></p><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8f5902;font-style:italic">// This sample uses the Apache HTTP client from HTTP Components (http://hc.apache.org/httpcomponents-client-ga/)
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">java.net.URI</span><span style="color:#ce5c00;font-weight:bold">;</span>
+<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">org.apache.http.HttpEntity</span><span style="color:#ce5c00;font-weight:bold">;</span>
+<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">org.apache.http.HttpResponse</span><span style="color:#ce5c00;font-weight:bold">;</span>
+<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">org.apache.http.client.HttpClient</span><span style="color:#ce5c00;font-weight:bold">;</span>
+<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">org.apache.http.client.methods.HttpGet</span><span style="color:#ce5c00;font-weight:bold">;</span>
+<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">org.apache.http.client.utils.URIBuilder</span><span style="color:#ce5c00;font-weight:bold">;</span>
+<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">org.apache.http.impl.client.HttpClients</span><span style="color:#ce5c00;font-weight:bold">;</span>
+<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">org.apache.http.util.EntityUtils</span><span style="color:#ce5c00;font-weight:bold">;</span>
+
+<span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">JavaSample</span> 
+<span style="color:#ce5c00;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">main</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">String</span><span style="color:#ce5c00;font-weight:bold">[]</span> <span style="color:#000">args</span><span style="color:#ce5c00;font-weight:bold">)</span> 
+    <span style="color:#ce5c00;font-weight:bold">{</span>
+        <span style="color:#000">HttpClient</span> <span style="color:#000">httpclient</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">HttpClients</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">createDefault</span><span style="color:#ce5c00;font-weight:bold">();</span>
+
+        <span style="color:#204a87;font-weight:bold">try</span>
+        <span style="color:#ce5c00;font-weight:bold">{</span>
+            <span style="color:#000">URIBuilder</span> <span style="color:#000">builder</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">URIBuilder</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">"https://dvp-apim-devportal-stg-westus2-001.azure-api.net/payment/v1pre/payments"</span><span style="color:#ce5c00;font-weight:bold">);</span>
+
+            <span style="color:#000">URI</span> <span style="color:#000">uri</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">builder</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">build</span><span style="color:#ce5c00;font-weight:bold">();</span>
+            <span style="color:#000">HttpPost</span> <span style="color:#000">request</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">HttpPost</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">uri</span><span style="color:#ce5c00;font-weight:bold">);</span>
+            <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setHeader</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">"Authorization"</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">"Bearer &lt; your sandbox token &gt;"</span><span style="color:#ce5c00;font-weight:bold">);</span>
+            <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setHeader</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">"Content-Type"</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">"application/json"</span><span style="color:#ce5c00;font-weight:bold">);</span>
+            <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setHeader</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">"Cache-Control"</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">"no-cache"</span><span style="color:#ce5c00;font-weight:bold">);</span>
+            <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setHeader</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">"X-Sandbox-Key"</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">"ffd2d443c69e4feea75764f3507bb828"</span><span style="color:#ce5c00;font-weight:bold">);</span>
+
+            <span style="color:#000">HttpResponse</span> <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">httpclient</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">execute</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">);</span>
+            <span style="color:#000">HttpEntity</span> <span style="color:#000">entity</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getEntity</span><span style="color:#ce5c00;font-weight:bold">();</span>
+
+            <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">entity</span> <span style="color:#ce5c00;font-weight:bold">!=</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#ce5c00;font-weight:bold">)</span> 
+            <span style="color:#ce5c00;font-weight:bold">{</span>
+                <span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">EntityUtils</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toString</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">entity</span><span style="color:#ce5c00;font-weight:bold">));</span>
+            <span style="color:#ce5c00;font-weight:bold">}</span>
+        <span style="color:#ce5c00;font-weight:bold">}</span>
+        <span style="color:#204a87;font-weight:bold">catch</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">Exception</span> <span style="color:#000">e</span><span style="color:#ce5c00;font-weight:bold">)</span>
+        <span style="color:#ce5c00;font-weight:bold">{</span>
+            <span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">e</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getMessage</span><span style="color:#ce5c00;font-weight:bold">());</span>
+        <span style="color:#ce5c00;font-weight:bold">}</span>
+    <span style="color:#ce5c00;font-weight:bold">}</span>
+<span style="color:#ce5c00;font-weight:bold">}</span></code></pre></div></div>
+        <div id="createatokenexamples-4" class="tab-pane" role="tabpanel" aria-labelledby="createatokenexamples-4">
+            
+            <p></p><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#000">$</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">ajax</span><span style="color:#000;font-weight:bold">({</span>
+    <span style="color:#000">type</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">"POST"</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">url</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">"https://dvp-apim-devportal-stg-westus2-001.azure-api.net/payment/v1pre/payments"</span><span style="color:#000;font-weight:bold">,</span>
+
+    <span style="color:#8f5902;font-style:italic">// Request headers
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">beforeSend</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">function</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">xhrObj</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#000">xhrObj</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">setRequestHeader</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">"Authorization"</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">"Bearer &lt; your sandbox token &gt;"</span><span style="color:#000;font-weight:bold">);</span>
+        <span style="color:#000">xhrObj</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">setRequestHeader</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">"Content-Type"</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">"application/json"</span><span style="color:#000;font-weight:bold">);</span>
+        <span style="color:#000">xhrObj</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">setRequestHeader</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">"Cache-Control"</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">"no-cache"</span><span style="color:#000;font-weight:bold">);</span>
+        <span style="color:#000">xhrObj</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">setRequestHeader</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">"X-Sandbox-Key"</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">"ffd2d443c69e4feea75764f3507bb828"</span><span style="color:#000;font-weight:bold">);</span>
+        <span style="color:#000;font-weight:bold">},</span>
+    <span style="color:#8f5902;font-style:italic">// Request body
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#000">data</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">"{
+</span><span style="color:#4e9a06">    "</span><span style="color:#000">paymentId</span><span style="color:#4e9a06">": "</span><span style="color:#000">MyUniqueId000000000001</span><span style="color:#4e9a06">",
+</span><span style="color:#4e9a06">    "</span><span style="color:#000">amount</span><span style="color:#4e9a06">": {
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">amount</span><span style="color:#4e9a06">": "</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#4e9a06">",
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">currencyCode</span><span style="color:#4e9a06">": "</span><span style="color:#000">USA</span><span style="color:#4e9a06">"
+</span><span style="color:#4e9a06">    },
+</span><span style="color:#4e9a06">    "</span><span style="color:#000">issuanceProductId</span><span style="color:#4e9a06">": "</span><span style="color:#000">BTTF2IP0006</span><span style="color:#4e9a06">",
+</span><span style="color:#4e9a06">    "</span><span style="color:#000">locationId</span><span style="color:#4e9a06">": "</span><span style="color:#000">PROMOCODE</span><span style="color:#4e9a06">",
+</span><span style="color:#4e9a06">    "</span><span style="color:#000">endClientId</span><span style="color:#4e9a06">": null,
+</span><span style="color:#4e9a06">    "</span><span style="color:#000">recipient</span><span style="color:#4e9a06">": {
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">participantId</span><span style="color:#4e9a06">": "</span><span style="color:#000">NLRTy3McrRPaASE8</span><span style="color:#4e9a06">",
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">firstName</span><span style="color:#4e9a06">": "</span><span style="color:#000">Emmett</span><span style="color:#4e9a06">",
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">lastName</span><span style="color:#4e9a06">": "</span><span style="color:#000">Brown</span><span style="color:#4e9a06">",
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">address1</span><span style="color:#4e9a06">": "</span><span style="color:#0000cf;font-weight:bold">1640</span> <span style="color:#000">Riverside</span> <span style="color:#000">Drive</span><span style="color:#4e9a06">",
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">address2</span><span style="color:#4e9a06">": "",
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">city</span><span style="color:#4e9a06">": "</span><span style="color:#000">Hill</span> <span style="color:#000">Valley</span><span style="color:#4e9a06">",
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">state</span><span style="color:#4e9a06">": "</span><span style="color:#000">CA</span><span style="color:#4e9a06">",
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">postalCode</span><span style="color:#4e9a06">": "</span><span style="color:#0000cf;font-weight:bold">91905</span><span style="color:#4e9a06">",
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">countryCode</span><span style="color:#4e9a06">": "</span><span style="color:#000">USA</span><span style="color:#4e9a06">",
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">emailAddress</span><span style="color:#4e9a06">": "</span><span style="color:#000">ebrown</span><span style="color:#a40000">@</span><span style="color:#000">symbolics</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">com</span><span style="color:#4e9a06">",
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">language</span><span style="color:#4e9a06">": "</span><span style="color:#000">EN</span><span style="color:#4e9a06">",
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">phoneNumber</span><span style="color:#4e9a06">": "</span><span style="color:#ce5c00;font-weight:bold">+</span><span style="color:#0000cf;font-weight:bold">19165554385</span><span style="color:#4e9a06">"
+</span><span style="color:#4e9a06">    },
+</span><span style="color:#4e9a06">    "</span><span style="color:#000">clientData</span><span style="color:#4e9a06">": {
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">clientData1</span><span style="color:#4e9a06">": null,
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">clientData2</span><span style="color:#4e9a06">": null,
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">clientData3</span><span style="color:#4e9a06">": null,
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">clientData4</span><span style="color:#4e9a06">": null,
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">clientData5</span><span style="color:#4e9a06">": null,
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">clientData6</span><span style="color:#4e9a06">": null,
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">clientData7</span><span style="color:#4e9a06">": null,
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">clientData8</span><span style="color:#4e9a06">": null,
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">clientData9</span><span style="color:#4e9a06">": null,
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">clientData10</span><span style="color:#4e9a06">": null
+</span><span style="color:#4e9a06">    },
+</span><span style="color:#4e9a06">    "</span><span style="color:#000">physicalCardOptions</span><span style="color:#4e9a06">": {
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">carrierMessage1</span><span style="color:#4e9a06">": "</span><span style="color:#000">Welcome</span><span style="color:#ce5c00;font-weight:bold">!</span><span style="color:#4e9a06">",
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">carrierMessage2</span><span style="color:#4e9a06">": "",
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">carrierMessage3</span><span style="color:#4e9a06">": "",
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">fourthLineEmboss</span><span style="color:#4e9a06">": "</span><span style="color:#000">Generico</span> <span style="color:#000">Team</span> <span style="color:#000">Member</span><span style="color:#4e9a06">"
+</span><span style="color:#4e9a06">    },
+</span><span style="color:#4e9a06">    "</span><span style="color:#000">issuanceEmailOptions</span><span style="color:#4e9a06">": {
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">distributionTemplateId</span><span style="color:#4e9a06">": "</span><span style="color:#000">DT82971</span><span style="color:#4e9a06">",
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">emailMessage</span><span style="color:#4e9a06">": "</span><span style="color:#000">Welcome</span><span style="color:#ce5c00;font-weight:bold">!</span><span style="color:#4e9a06">"
+</span><span style="color:#4e9a06">    },
+</span><span style="color:#4e9a06">    "</span><span style="color:#000">redemptionOptions</span><span style="color:#4e9a06">": {
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">walletUserName</span><span style="color:#4e9a06">": null,
+</span><span style="color:#4e9a06">        "</span><span style="color:#000">redemptionMessage</span><span style="color:#4e9a06">": null
+</span><span style="color:#4e9a06">    }
+</span><span style="color:#4e9a06">}"</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000;font-weight:bold">})</span>
+<span style="color:#000;font-weight:bold">.</span><span style="color:#000">done</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">data</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">alert</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">"success"</span><span style="color:#000;font-weight:bold">);</span>
+<span style="color:#000;font-weight:bold">})</span>
+<span style="color:#000;font-weight:bold">.</span><span style="color:#000">fail</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">alert</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">"error"</span><span style="color:#000;font-weight:bold">);</span>
+<span style="color:#000;font-weight:bold">});</span>
+</code></pre></div></div>
+        <div id="createatokenexamples-5" class="tab-pane" role="tabpanel" aria-labelledby="createatokenexamples-5">
+            
+            <p></p><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#ce5c00;font-weight:bold">&lt;?</span><span style="color:#000">php</span>
+<span style="color:#8f5902;font-style:italic">// This sample uses the Apache HTTP client from HTTP Components (http://hc.apache.org/httpcomponents-client-ga/)
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">require_once</span> <span style="color:#4e9a06">'HTTP/Request2.php'</span><span style="color:#000;font-weight:bold">;</span>
+
+<span style="color:#000">$request</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">Http_Request2</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'https://dvp-apim-devportal-stg-westus2-001.azure-api.net/payment/v1pre/payments'</span><span style="color:#000;font-weight:bold">);</span>
+<span style="color:#000">$url</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">$request</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getUrl</span><span style="color:#000;font-weight:bold">();</span>
+
+<span style="color:#000">$request</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">setMethod</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">HTTP_Request2</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#c4a000">METHOD_POST</span><span style="color:#000;font-weight:bold">);</span>
+
+<span style="color:#204a87;font-weight:bold">try</span>
+<span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">$response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">$request</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">send</span><span style="color:#000;font-weight:bold">();</span>
+    <span style="color:#204a87;font-weight:bold">echo</span> <span style="color:#000">$response</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#c4a000">getBody</span><span style="color:#000;font-weight:bold">();</span>
+<span style="color:#000;font-weight:bold">}</span>
+<span style="color:#204a87;font-weight:bold">catch</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">HttpException</span> <span style="color:#000">$ex</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">echo</span> <span style="color:#000">$ex</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span>
+
+<span style="color:#8f5902;font-style:italic">?&gt;</span><span style="color:#a40000">
+</span></code></pre></div></div>
+        <div id="createatokenexamples-6" class="tab-pane" role="tabpanel" aria-labelledby="createatokenexamples-6">
+            
+            <p></p><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#8f5902;font-style:italic">########### Python 2.7 #############</span>
+<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">httplib</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">urllib</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">base64</span>
+
+<span style="color:#000">headers</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+\<span style="color:#8f5902;font-style:italic"># Request headers</span>
+<span style="color:#4e9a06">'Content-Type'</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">'application/json'</span><span style="color:#000;font-weight:bold">,</span>
+<span style="color:#4e9a06">'Cache-Control'</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">'no-cache'</span><span style="color:#000;font-weight:bold">,</span>
+<span style="color:#4e9a06">'X-Sandbox-Key'</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">'ffd2d443c69e4feea75764f3507bb828'</span><span style="color:#000;font-weight:bold">,</span>
+<span style="color:#000;font-weight:bold">}</span>
+
+<span style="color:#000">params</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">urllib</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">urlencode</span><span style="color:#000;font-weight:bold">({</span>
+<span style="color:#000;font-weight:bold">})</span>
+
+<span style="color:#204a87;font-weight:bold">try</span><span style="color:#000;font-weight:bold">:</span>
+<span style="color:#000">conn</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">"POST"</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">"?</span><span style="color:#4e9a06">%s</span><span style="color:#4e9a06">"</span> <span style="color:#ce5c00;font-weight:bold">%</span> <span style="color:#000">params</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">headers</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">conn</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">getresponse</span><span style="color:#000;font-weight:bold">()</span>
+    <span style="color:#000">data</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">read</span><span style="color:#000;font-weight:bold">()</span>
+    <span style="color:#204a87;font-weight:bold">print</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">data</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000">conn</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">close</span><span style="color:#000;font-weight:bold">()</span>
+<span style="color:#204a87;font-weight:bold">except</span> <span style="color:#c00;font-weight:bold">Exception</span> <span style="color:#204a87;font-weight:bold">as</span> <span style="color:#000">e</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#204a87;font-weight:bold">print</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">"[Errno {0}] {1}"</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">format</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">e</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">errno</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">e</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">strerror</span><span style="color:#000;font-weight:bold">))</span>
+
+<span style="color:#8f5902;font-style:italic">####################################</span>
+
+<span style="color:#8f5902;font-style:italic">########### Python 3.2 #############</span>
+<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">http.client</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">urllib.request</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">urllib.parse</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">urllib.error</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">base64</span>
+
+<span style="color:#000">headers</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#8f5902;font-style:italic"># Request headers</span>
+    <span style="color:#4e9a06">'Authorization'</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">'Bearer &lt; your sandbox token &gt;'</span><span style="color:#000;font-weight:bold">,</span>
+<span style="color:#4e9a06">'Content-Type'</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">'application/json'</span><span style="color:#000;font-weight:bold">,</span>
+<span style="color:#4e9a06">'Cache-Control'</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">'no-cache'</span><span style="color:#000;font-weight:bold">,</span>
+<span style="color:#4e9a06">'X-Sandbox-Key'</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">'ffd2d443c69e4feea75764f3507bb828'</span><span style="color:#000;font-weight:bold">,</span>
+<span style="color:#000;font-weight:bold">}</span>
+
+<span style="color:#000">params</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">urllib</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">parse</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">urlencode</span><span style="color:#000;font-weight:bold">({</span>
+<span style="color:#000;font-weight:bold">})</span>
+
+<span style="color:#204a87;font-weight:bold">try</span><span style="color:#000;font-weight:bold">:</span>
+<span style="color:#000">conn</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">"POST"</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">"?</span><span style="color:#4e9a06">%s</span><span style="color:#4e9a06">"</span> <span style="color:#ce5c00;font-weight:bold">%</span> <span style="color:#000">params</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">headers</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">conn</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">getresponse</span><span style="color:#000;font-weight:bold">()</span>
+    <span style="color:#000">data</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">read</span><span style="color:#000;font-weight:bold">()</span>
+    <span style="color:#204a87;font-weight:bold">print</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">data</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000">conn</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">close</span><span style="color:#000;font-weight:bold">()</span>
+<span style="color:#204a87;font-weight:bold">except</span> <span style="color:#c00;font-weight:bold">Exception</span> <span style="color:#204a87;font-weight:bold">as</span> <span style="color:#000">e</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#204a87;font-weight:bold">print</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">"[Errno {0}] {1}"</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">format</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">e</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">errno</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">e</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">strerror</span><span style="color:#000;font-weight:bold">))</span>
+
+<span style="color:#8f5902;font-style:italic">####################################</span></code></pre></div></div>
+        <div id="createatokenexamples-7" class="tab-pane" role="tabpanel" aria-labelledby="createatokenexamples-7">
+            
+            <p></p><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#204a87">require</span> <span style="color:#4e9a06">'net/http'</span>
+
+<span style="color:#000">uri</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">URI</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">'https://dvp-apim-devportal-stg-westus2-001.azure-api.net/payment/v1pre/payments'</span><span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#000">request</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Net</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">HTTP</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">Post</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">new</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">uri</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">request_uri</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">\</span><span style="color:#8f5902;font-style:italic"># Request headers</span>
+<span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">'Authorization'</span><span style="color:#ce5c00;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">'Bearer &lt; your sandbox token &gt;'</span>
+<span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">'Content-Type'</span><span style="color:#ce5c00;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">'application/json'</span>
+<span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">'Cache-Control'</span><span style="color:#ce5c00;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">'no-cache'</span>
+<span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">'X-Sandbox-Key'</span><span style="color:#ce5c00;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">'ffd2d443c69e4feea75764f3507bb828'</span>
+<span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Net</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">HTTP</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">start</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">uri</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">host</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">uri</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">port</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">:use_ssl</span> <span style="color:#ce5c00;font-weight:bold">=&gt;</span> <span style="color:#000">uri</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">scheme</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#4e9a06">'https'</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">do</span> <span style="color:#ce5c00;font-weight:bold">|</span><span style="color:#000">http</span><span style="color:#ce5c00;font-weight:bold">|</span>
+    <span style="color:#000">http</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#204a87;font-weight:bold">end</span>
+
+<span style="color:#204a87">puts</span> <span style="color:#000">response</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">body</span></code></pre></div></div>
+        <div id="createatokenexamples-8" class="tab-pane" role="tabpanel" aria-labelledby="createatokenexamples-8">
+            
+            <p></p><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-objective-c" data-lang="objective-c"><span style="color:#8f5902;font-style:italic">#import &lt;Foundation/Foundation.h&gt;
+</span><span style="color:#8f5902;font-style:italic"></span>
+<span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">main</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">argc</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">const</span> <span style="color:#204a87;font-weight:bold">char</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">argv</span><span style="color:#000;font-weight:bold">[])</span>
+<span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">NSAutoreleasePool</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">pool</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[[</span><span style="color:#000">NSAutoreleasePool</span> <span style="color:#000">alloc</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000">init</span><span style="color:#000;font-weight:bold">];</span>
+    
+    <span style="color:#000">NSString</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">path</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">@"https://dvp-apim-devportal-stg-westus2-001.azure-api.net/payment/v1pre/payments"</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#000">NSArray</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">array</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">@[</span>
+                         <span style="color:#8f5902;font-style:italic">// Request parameters
+</span><span style="color:#8f5902;font-style:italic"></span>                         <span style="color:#4e9a06">@"entities=true"</span><span style="color:#000;font-weight:bold">,</span>
+<span style="color:#000">]</span><span style="color:#000;font-weight:bold">;</span>
+    
+    <span style="color:#000">NSString</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">string</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">array</span> <span style="color:#f57900">componentsJoinedByString</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">@"&amp;"</span><span style="color:#000;font-weight:bold">];</span>
+    <span style="color:#000">path</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">path</span> <span style="color:#f57900">stringByAppendingFormat</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">@"?%@"</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">string</span><span style="color:#000;font-weight:bold">];</span>
+
+    <span style="color:#000">NSLog</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">@"%@"</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">path</span><span style="color:#000;font-weight:bold">);</span>
+
+    <span style="color:#000">NSMutableURLRequest</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">_request</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">NSMutableURLRequest</span> <span style="color:#f57900">requestWithURL</span><span style="color:#000;font-weight:bold">:[</span><span style="color:#000">NSURL</span> <span style="color:#f57900">URLWithString</span><span style="color:#000;font-weight:bold">:</span><span style="color:#000">path</span><span style="color:#000;font-weight:bold">]];</span>
+    <span style="color:#000;font-weight:bold">[</span><span style="color:#000">_request</span> <span style="color:#f57900">setHTTPMethod</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">@"POST"</span><span style="color:#000;font-weight:bold">];</span>
+<span style="color:#000">NSURLResponse</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">response</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">nil</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#000">NSError</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">error</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">nil</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#000">NSData</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">_connectionData</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">NSURLConnection</span> <span style="color:#f57900">sendSynchronousRequest</span><span style="color:#000;font-weight:bold">:</span><span style="color:#000">_request</span> <span style="color:#f57900">returningResponse</span><span style="color:#000;font-weight:bold">:</span><span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">response</span> <span style="color:#f57900">error</span><span style="color:#000;font-weight:bold">:</span><span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">error</span><span style="color:#000;font-weight:bold">];</span>
+
+    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">nil</span> <span style="color:#ce5c00;font-weight:bold">!=</span> <span style="color:#000">error</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#000">NSLog</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">@"Error: %@"</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">error</span><span style="color:#000;font-weight:bold">);</span>
+    <span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#204a87;font-weight:bold">else</span>
+    <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#000">NSError</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">error</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">nil</span><span style="color:#000;font-weight:bold">;</span>
+        <span style="color:#000">NSMutableDictionary</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">json</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">nil</span><span style="color:#000;font-weight:bold">;</span>
+        <span style="color:#000">NSString</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">dataString</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[[</span><span style="color:#000">NSString</span> <span style="color:#000">alloc</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#f57900">initWithData</span><span style="color:#000;font-weight:bold">:</span><span style="color:#000">_connectionData</span> <span style="color:#f57900">encoding</span><span style="color:#000;font-weight:bold">:</span><span style="color:#000">NSUTF8StringEncoding</span><span style="color:#000;font-weight:bold">];</span>
+        <span style="color:#000">NSLog</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">@"%@"</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">dataString</span><span style="color:#000;font-weight:bold">);</span>
+        
+        <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">nil</span> <span style="color:#ce5c00;font-weight:bold">!=</span> <span style="color:#000">_connectionData</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#000">json</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">NSJSONSerialization</span> <span style="color:#f57900">JSONObjectWithData</span><span style="color:#000;font-weight:bold">:</span><span style="color:#000">_connectionData</span> <span style="color:#f57900">options</span><span style="color:#000;font-weight:bold">:</span><span style="color:#000">NSJSONReadingMutableContainers</span> <span style="color:#f57900">error</span><span style="color:#000;font-weight:bold">:</span><span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">error</span><span style="color:#000;font-weight:bold">];</span>
+        <span style="color:#000;font-weight:bold">}</span>
+        
+        <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">error</span> <span style="color:#ce5c00;font-weight:bold">||</span> <span style="color:#ce5c00;font-weight:bold">!</span><span style="color:#000">json</span><span style="color:#000;font-weight:bold">)</span>
+        <span style="color:#000;font-weight:bold">{</span>
+            <span style="color:#000">NSLog</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">@"Could not parse loaded json with error:%@"</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">error</span><span style="color:#000;font-weight:bold">);</span>
+        <span style="color:#000;font-weight:bold">}</span>
+        
+        <span style="color:#000">NSLog</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">@"%@"</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">json</span><span style="color:#000;font-weight:bold">);</span>
+        <span style="color:#000">_connectionData</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">nil</span><span style="color:#000;font-weight:bold">;</span>
+    <span style="color:#000;font-weight:bold">}</span>
+    
+    <span style="color:#000;font-weight:bold">[</span><span style="color:#000">pool</span> <span style="color:#000">drain</span><span style="color:#000;font-weight:bold">];</span>
+
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">}</span></code></pre></div></div></div>
+
+<h3 id="step-2-switch-to-the-test-environment">Step 2: Switch to the test environment<a aria-hidden="true" href="https://developers-stg.ladsmark.com/docs/getting-started/#step-2-switch-to-the-test-environment" style="visibility: hidden;"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h3>
+<p>Accessing the test environment will require that you
+<a href="https://developers-stg.ladsmark.com/docs/security/obtain-credentials">obtain the credentials</a>
+for that environment, then use the credentials as described below.</p>
+
+<ul class="nav nav-tabs" id="switchtotest" role="tablist"><li class="nav-item"><a data-toggle="tab" class="nav-link active" href="https://developers-stg.ladsmark.com/docs/getting-started/#switchtotest-0" role="tab" aria-controls="switchtotest-0" aria-selected="true">C#</a></li>
+    
+    <li class="nav-item"><a data-toggle="tab" class="nav-link" href="https://developers-stg.ladsmark.com/docs/getting-started/#switchtotest-1" role="tab" aria-controls="switchtotest-1">Java</a></li></ul>
+<div class="tab-content" id="switchtotest"><div id="switchtotest-0" class="tab-pane show active" role="tabpanel" aria-labelledby="switchtotest-0">
+        
+            <p></p><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">addressOfAuthServer</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"https://apiauth-test.onbe.com"</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">paymentsBaseUrl</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"https://api-test.onbe.com/payments"</span><span style="color:#000;font-weight:bold">;</span>
+
+<span style="color:#204a87;font-weight:bold">using</span> <span style="color:#000">IdentityModel.Client</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">...</span>
+<span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">client</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">HttpClient</span><span style="color:#000;font-weight:bold">();</span>
+<span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">discoveryDoc</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">await</span> <span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">GetDiscoveryDocumentAsync</span><span style="color:#000;font-weight:bold">();</span>
+
+<span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">tokenResponse</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">await</span> <span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">RequestClientCredentialsTokenAsync</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">ClientCredentialsTokenRequest</span>
+<span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">Address</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">discoveryDoc</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">TokenEndpoint</span><span style="color:#000;font-weight:bold">,</span>
+
+    <span style="color:#000">ClientId</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">clientId</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">ClientSecret</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">clientSecret</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">Scope</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">scope</span>
+<span style="color:#000;font-weight:bold">});</span>
+
+<span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">apiClient</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">HttpClient</span><span style="color:#000;font-weight:bold">();</span>
+<span style="color:#000">apiClient</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">DefaultRequestHeaders</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Authorization</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">AuthenticationHeaderValue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">"Bearer"</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">tokenResponse</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">AccessToken</span><span style="color:#000;font-weight:bold">);</span>
+</code></pre></div></div>
+        <div id="switchtotest-1" class="tab-pane" role="tabpanel" aria-labelledby="switchtotest-1">
+            
+            <p></p><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">String</span> <span style="color:#000">addressOfAuthServer</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">"https://apiauth-test.onbe.com"</span><span style="color:#ce5c00;font-weight:bold">;</span>
+<span style="color:#000">String</span> <span style="color:#000">paymentsBaseUrl</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">"https://api-test.onbe.com/payments"</span><span style="color:#ce5c00;font-weight:bold">;</span></code></pre></div></div></div>
+
+<h3 id="step-3-switch-to-the-production-environment">Step 3: Switch to the production environment<a aria-hidden="true" href="https://developers-stg.ladsmark.com/docs/getting-started/#step-3-switch-to-the-production-environment" style="visibility: hidden;"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg></a></h3>
+<p>Accessing the production environment will require that you
+<a href="https://developers-stg.ladsmark.com/docs/security/obtain-credentials">obtain the credentials</a>
+for that environment, then use the credentials as described below.</p>
+
+<ul class="nav nav-tabs" id="switchtoproduction" role="tablist"><li class="nav-item"><a data-toggle="tab" class="nav-link active" href="https://developers-stg.ladsmark.com/docs/getting-started/#switchtoproduction-0" role="tab" aria-controls="switchtoproduction-0" aria-selected="true">C#</a></li>
+    
+    <li class="nav-item"><a data-toggle="tab" class="nav-link" href="https://developers-stg.ladsmark.com/docs/getting-started/#switchtoproduction-1" role="tab" aria-controls="switchtoproduction-1">Java</a></li></ul>
+<div class="tab-content" id="switchtoproduction"><div id="switchtoproduction-0" class="tab-pane show active" role="tabpanel" aria-labelledby="switchtoproduction-0">
+        
+            <p></p><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">addressOfAuthServer</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"https://apiauth.onbe.com"</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000">paymentsBaseUrl</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">"https://api.onbe.com/payments"</span><span style="color:#000;font-weight:bold">;</span>
+
+<span style="color:#204a87;font-weight:bold">using</span> <span style="color:#000">IdentityModel.Client</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#000;font-weight:bold">...</span>
+<span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">client</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">HttpClient</span><span style="color:#000;font-weight:bold">();</span>
+<span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">discoveryDoc</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">await</span> <span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">GetDiscoveryDocumentAsync</span><span style="color:#000;font-weight:bold">();</span>
+
+<span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">tokenResponse</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">await</span> <span style="color:#000">client</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">RequestClientCredentialsTokenAsync</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">ClientCredentialsTokenRequest</span>
+<span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#000">Address</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">discoveryDoc</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">TokenEndpoint</span><span style="color:#000;font-weight:bold">,</span>
+
+    <span style="color:#000">ClientId</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">clientId</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">ClientSecret</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">clientSecret</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#000">Scope</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">scope</span>
+<span style="color:#000;font-weight:bold">});</span>
+
+<span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">apiClient</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">HttpClient</span><span style="color:#000;font-weight:bold">();</span>
+<span style="color:#000">apiClient</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">DefaultRequestHeaders</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Authorization</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">AuthenticationHeaderValue</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">"Bearer"</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">tokenResponse</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">AccessToken</span><span style="color:#000;font-weight:bold">);</span>
+</code></pre></div></div>
+        <div id="switchtoproduction-1" class="tab-pane" role="tabpanel" aria-labelledby="switchtoproduction-1">
+            
+            <p></p><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">String</span> <span style="color:#000">addressOfAuthServer</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">"https://apiauth.onbe.com"</span><span style="color:#ce5c00;font-weight:bold">;</span>
+<span style="color:#000">String</span> <span style="color:#000">paymentsBaseUrl</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">"https://api.onbe.com/payments"</span><span style="color:#ce5c00;font-weight:bold">;</span></code></pre></div></div></div>
+
+
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">Last modified June 1, 2021
+</div>
+</div>
+
+
+          </main>
+        </div>
+      </div>
+    </div>
+    <div class="privacy-popup flex justify-content-center" style="display: none;">
+    <div class="privacy-popup-inner flex align-items-center">
+        <div style="text-align: center;">
+            By using this website, you agree to our&nbsp;<a id="showPrivacyPolicyModal">Privacy Policy</a>.
+        </div>
+        <div>
+            <img id="hidePrivacyPolicyBox" src="./Getting Started _ API Simplified_files/X.svg" alt="Icon" width="15" height="15" class="x-privacy-policy">
+        </div>
+    </div>
+</div>
+<div id="privacy-policy-modal" class="modal" style="display: none;">
+    <div class="modal-header flex align-items-center">
+        <div class="flex-1">Privacy Policy</div>
+        <div class="close-privacy-policy-modal" style="cursor: pointer;">
+            <img src="./Getting Started _ API Simplified_files/Cancel.svg" alt="Icon" width="30" height="30">
+        </div>
+    </div>
+    <div class="modal-body">
+        <div class="title">
+            PURPOSE
+        </div>
+        <div class="mb-lg">
+            This Privacy Notice describes how Onbe, Inc. (“we”, “our”, “us” or “Onbe”) manages the personal data we collect about users of our Web sites and mobile applications, as well as the personal data we collect in providing our products and services or when individuals communicate with us about our Web sites, mobile apps, products or services. It explains (1) what personal data we collect, (2) how we use the personal data we collect, (3) how long we hold the data, (4) what and with whom we share it with, (5) how to control your privacy options with Onbe, (6) what are your rights, and (7) certain other privacy information. In addition to these items, we also process personal data on behalf of our clients and card or payment issuers When we do so, we process personal data solely to provide services to program sponsors (also referred to as “clients”) and card or payment issuers, we collect, use and disclose the data only under the instructions of the program sponsor or the card or payment issuer, and our processing of the data is subject to their instructions and privacy notices. Please read the agreement and terms and conditions provided in conjunction with your payment for further details regarding your payment issuer. For access to each payment issuer’s privacy policy, please click on each name:<br><br>
+            <ul>
+                <li><a href="https://www.metabank.com/Media/Default/policy/metabank-privacy-policy.pdf" target="_blank" rel="noopener">MetaBank®, National Association, Member FDIC </a></li>
+                <li><a href="https://thebancorp.mybankingservices.com/Global/docs/privacy/Retailnotice_generic.pdf" target="_blank" rel="noopener">The Bancorp Bank, Member FDIC </a></li>
+                <li><a href="https://f.hubspotusercontent20.net/hubfs/6138778/Davinci%20TPML%20Privacy%20Notice.pdf" target="_blank" rel="noopener">Transact Payments Malta Limited (EU Residents)</a></li>
+                <li><a href="https://www.transactpaymentsltd.com/privacy-policy/" target="_blank" rel="noopener">Transact Payments Limited (UK Residents)</a></li>
+                <li><a href="https://www.peoplestrust.com/en/legal/privacy-security/" target="_blank" rel="noopener">People’s Trust Company.</a></li>
+            </ul>
+        </div>
+        <div class="title">
+            WHAT DATA WE COLLECT ABOUT YOU
+        </div>
+        <div class="mb-lg">
+            Onbe may collect Personal Data, for example through the use of our products, accessing our websites or when you contact customer service. Personal Data may include the following, as applicable:<br><br>
+            <ul>
+                <li>Full name, personal or business contact information including physical mailing address, email address, telephone number, and in some instances date of birth and/or national identification number (e.g., SSN).</li>
+                <li>Contact preferences and other business information that helps us do business with you.</li>
+                <li>Technical information such as login information, IP address, device and operating system.</li>
+                <li>Other data with your consent or as allowed or required by applicable law.</li>
+            </ul>
+        </div>
+        <div class="title">
+            HOW WE USE YOUR DATA
+        </div>
+        <div class="mb-lg">
+            We collect Personal Data about you to operate and to support our services and products only. We may use this Personal Data to:<br><br>
+            <ul>
+                <li>Send administrative material to you, such as changes to our terms, conditions, and policies.</li>
+                <li>Provide access to our website and customer service.</li>
+                <li>Provide technical support.</li>
+                <li>Send you alerts that you requested.</li>
+                <li>Identify areas where our products and services can be enhanced.</li>
+                <li>Detect and protect against errors, fraud, or other criminal activity.</li>
+            </ul>
+            We may also use your Personal Data in other instances with your consent or as allowed or required by law.
+        </div>
+        <div class="title">
+            HOW LONG WE HOLD YOUR DATA
+        </div>
+        <div class="mb-lg">
+            We may hold Personal Data as long as needed or relevant for the practices described in this Privacy Notice or as otherwise applicable by law. Actual hold periods differ depending on the type of services and products. The principles we use to determine the holding periods include the following:d or relevant for the practices described in this Privacy Notice or as otherwise applicable by law. Actual hold periods differ depending on the type of services and products. The principles we use to determine the holding periods include the following:<br><br>
+            <ul>
+                <li>Personal Data needed to provide our services and products as described in this Privacy Notice;</li>
+                <li>Personal Data needed for auditing purposes;</li>
+                <li>Personal Data needed to troubleshoot problems or to assist with investigations;</li>
+                <li>Personal Data needed to enforce our policies;</li>
+                <li>Personal Data needed to comply with legal requirements.</li>
+            </ul>
+            Regulations require financial institutions to obtain, verify, and record information that identifies each person for whom we open or have established an account. With respect to such records, Onbe generally holds those records for a minimum of seven years.
+        </div>
+        <div class="title">
+            WHAT AND WITH WHOM WE SHARE
+        </div>
+        <div class="mb-lg">
+            We do not share your Personal Information with third-parties for joint marketing purposes or so they can market to you, without your prior express consent. We may share your Personal Data:<br><br>
+            <ul>
+                <li>With organizations and partners that help us operate our business by providing services such as website hosting, data analysis, information technology, customer service, email delivery, auditing and other similar services.</li>
+                <li>With partners and other vendors that perform services on our behalf, such as network services support, including data processing services, customer service, call center services, information technology services, internal audit, management, or administrative purposes.</li>
+                <li>To comply with the law or other legal responsibilities such as responding to subpoenas, including laws and other legal duties outside your country of residence.</li>
+                <li>To answer requests from government authorities including authorities outside your country of residence.</li>
+                <li>To protect our rights, business operations and possessions, or that of our users, employees and partners.</li>
+                <li>To investigate, stop, or take action concerning possible or suspected illegal activities, fraud, or violations of our terms and conditions.</li>
+            </ul>
+        </div>
+        <div class="title">
+            HOW TO CONTROL YOUR PRIVACY OPTIONS
+        </div>
+        <div class="mb-lg">
+            You can update your account profile online or by email. We maintain electronic records of your Personal Data for the purposes described in this Privacy Notice. You will be able to access and edit your Personal Data on the website listed on the back of the card. Otherwise, you may contact us at the e-mail address listed at the bottom of this Notice. Your right to access, correct or delete your Personal Data indicated in our records is subject to applicable law including our right to retain documentation of our compliance with applicable legal requirements and technology limitations. We may take reasonable steps to confirm your identity before giving access or making modifications to your Personal Data.<br><br>
+            If we receive data from other sources, we may direct you to contact those sources. Please note that we are not responsible for permitting you to review, or for updating or deleting personal data that you provide to those sources or any other third-party.
+        </div>
+        <div class="title">
+            WE USE BROWSER INFORMATION
+        </div>
+        <div class="mb-lg">
+            We may use cookies, browser data, and location information, to uniquely recognize your computer or device and the pages you see on our website. We use tracking tools to:<br><br>
+            <ul>
+                <li>Identify new or past users;</li>
+                <li>Save your password if you are registered on our website;</li>
+                <li>Enhance our website and troubleshoot issues.</li>
+                <li>Investigate, stop, or take action concerning possible or suspected illegal activities, fraud, or violations of our terms and conditions.</li>
+            </ul>
+            For more information, please read our Cookie Policy.<br><br>
+            <b>You can adjust cookies and tracking tools on our Website.</b> Your web browser may give you the ability to adjust cookies. How you do so depends on the type of cookie. Certain web browsers can be set to clear past and reject future cookies. If you block cookies on your browser, certain features of our website may not work. Additionally, if you limit or delete cookies, not all of the tracking activities we have defined here will stop. The choices you make are both browser and device specific. For more information on cookies and how to manage them, visit <a target="_blank" href="http://www.allaboutcookies.org/">www.allaboutcookies.org</a>.
+        </div>
+        <div class="title">
+            WHAT ARE YOUR RIGHTS UNDER DATA<br>
+            PRIVACY LAWS
+        </div>
+        <div class="mb-lg">
+            When you provide us with your Personal Data it is only used for the purposes of providing products and services as described in this Privacy Notice. You have the option to opt-out of certain uses and disclosures of your Personal Data as outlined in this Notice. If you would like to opt-out of these uses or disclosures of your Personal Data, you may contact us at the email address listed at the bottom of this Notice.<br><br>
+            <b>California Residents</b> If you are a California resident, California law may provide you with additional rights regarding our use of your personal information. Effective January 1, 2020, under the California Consumer Privacy Act (CCPA), residents of California have certain rights to access, delete, or otherwise control the use, collection, and/or disclosure of their information. California residents may also opt out of the sale of such information, if applicable. These provisions of the CCPA do not apply to personal information collected, processed, shared, or disclosed by financial institutions pursuant to federal law.<br><br>
+            To contact us with questions about our compliance with the CCPA, or exercise the access, data portability, and deletion rights described above, please submit a verifiable consumer request by either:<br><br>
+            <ul>
+                <li>Calling us at 866.230.3809</li>
+                <li>Emailing us at: compliance@onbe.com</li>
+            </ul>
+            Only you or a person registered with the California Secretary of State that you authorize to act on your behalf, may make a verifiable consumer request related to your personal information.<br><br>
+            You may also make a verifiable consumer request on behalf of your minor child.<br><br>
+            You may only make a verifiable consumer request for access or data portability twice within a 12-month period. The verifiable consumer request must:<br><br>
+            <ul>
+                <li>Provide sufficient information that allows us to reasonably verify you are the person about whom we collected personal information or an authorized representative.</li>
+                <li>Describe your request with sufficient detail that allows us to properly understand, evaluate, and respond to it.</li>
+            </ul>
+            We cannot respond to your request or provide you with personal information if we cannot verify your identity or authority to make the request and confirm the personal information relates to you. Making a verifiable consumer request does not require you to create an account with us. We will only use personal information provided in a verifiable consumer request to verify the requestor's identity or authority to make the request.<br><br>
+            Please note, consumers will not receive discriminatory treatment for the exercise of the privacy rights conferred by the CCPA.
+        </div>
+        <div class="title">
+            EU &amp; UK RESIDENTS
+        </div>
+        <div class="mb-lg">
+            We adhere to applicable data protection laws in the European Union ("EU") and the United Kingdom (“UK”), when relevant and appropriate, including the General Data Protection Regulation (“GDPR”).  In addition, we participate in and comply with the EU-U.S. Privacy Shield Principles as set forth by the U.S. Department of Commerce regarding the collection, use, and retention of personal information from European Union member countries (including EEA member countries) and the UK as well as Switzerland, respectively.<br><br>
+            As described in our <a target="_blank" href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active">Privacy Shield certification</a>, we comply with the EU-U.S. and Swiss-U.S. Privacy Shield Frameworks as set forth by the US Department of Commerce regarding the collection, use and retention of personal information from European Union member countries (including EEA member countries) and the UK as well as Switzerland, respectively. Onbe remains responsible for any of your personal information that is shared under the Onward Transfer Principle with third parties for external processing on our behalf, as described in the “What and Whom We Share” section. To learn more about the Privacy Shield program, and to view Google’s certification, please visit the <a target="_blank" href="https://www.privacyshield.gov/welcome">Privacy Shield</a> website.<br><br>
+            Under the Privacy Shield Principles, Onbe is subject to the investigative and enforcement authority of the Federal Trade Commission (FTC), and we may be required to disclose personal information in response to lawful requests by public authorities which may include national security or law enforcement requests. Onbe has liability for onward transfers to third parties unless we can prove we were not a party to the events giving rise to the damages.  Additionally, an individual may be allowed to invoke binding arbitration to resolve disputes under certain limited conditions. If you have an inquiry regarding our privacy practices in relation to our Privacy Shield certification, we encourage you to <a target="_blank" href="https://www.onbe.com/contact-us">contact us</a>.
+        </div>
+        <div class="title">
+            MODEL CONTRACT CLAUSES
+        </div>
+        <div class="mb-lg">
+            The European Commission has approved the use of model contract clauses as a means of ensuring adequate protection when transferring data outside of the EEA. By incorporating model contract clauses into a contract established between the parties transferring data, personal data can be protected when transferred outside the EEA to countries which have not been deemed by the European Commission to adequately protect personal data. Onbe offers these model contract clauses for to our clients (also known as Program Sponsors).<br><br>
+            If you are located in the EU or the UK, you have the right to:
+            <ul>
+                <li>Request&nbsp;<u>access</u>,&nbsp;<u>rectify</u>&nbsp;or&nbsp;<u>delete</u>&nbsp;your Personal Data;</li>
+                <li><u>Object</u>,&nbsp;<u>port</u>or&nbsp;<u>restrict</u>&nbsp;the processing of your Personal Data;</li>
+                <li>Withdraw any consent you have provided to our processing of your Personal Data;</li>
+            </ul>
+            We will make every effort to honor your request, however in some situations, we may not be able to act and/or may impose limitations on your request.  For instance, if your request is likely to adversely affect the rights and freedoms of others, prejudice the execution or enforcement of the law, interfere with pending or future litigation, or infringe on applicable law.<br><br>
+            You may exercise these rights free of charge. However, we may charge a reasonable fee or refuse to act on a request if it is manifestly unfounded or excessive, in particular because of its repetitive character.<br><br>
+            Onbe commits to resolve complaints about our collection or use of your personal information in accordance with EU/UK data protection regulations and the Privacy Shield Principles. EU and UK individuals with inquiries or complaints regarding this Policy should first contact Onbe’s <a href="https://www.onbe.com/contact-us" target="_blank" rel="noopener">Customer Service</a> team.  You have the right under applicable EU and UK privacy law to file a complaint with the relevant Data Protection Authority in your country of residence.<br><br>
+            Onbe has further committed to refer unresolved Privacy Shield complaints to the Better Business Bureau (BBB), an alternative dispute resolution provider located in the United States. If you do not receive timely acknowledgment of your complaint from us, or if we have not addressed your complaint to your satisfaction, please visit <a href="https://www.bbb.org/EU-privacy-shield/for-eu-consumers" target="_blank" rel="noopener">BBB-EU Privacy Shield</a> for more information or to file a complaint.  This service is provided to you at no cost.<br><br>
+            If you wish to exercise any of these rights, please contact us using the email address listed at the bottom of this Notice.
+        </div>
+        <div class="title">
+            OTHER PRIVACY INFORMATION
+        </div>
+        <div class="mb-lg">
+            <b>We process your Personal Data, on specific legal grounds</b>. We do so with your consent, to fulfill the contractual requirements we have with you, comply with our legal responsibilities, or as needed to deliver our services and products and for other legitimate business interests for the purposes described in this Privacy Notice.<br><br>
+            <b>We protect your Personal Data</b>. We implement security policies, processes and technical security solutions to protect Personal Data which includes various network safeguards, logging and alerting. In order to perform certain obligations, our authorized employees and service providers will need access to your Personal Data. We contractually require our service providers to protect your Personal Data.<br><br>
+            <b>Data storage and transfers</b>. We store Personal Data in the United States. If you reside outside of the U.S, you understand that we transfer Personal Data to the United States. Our products and services and associated practices comply with privacy provisions as set forth by the US government, including the US Department of Commerce’s EU Privacy Shield Framework, and GDPR as required by EU/UK. When we transfer your Personal Data to service providers or third parties as outlined in this Privacy Notice, we rely on contractual clauses to administer the transfer of that Personal Data and uphold those entities to protecting the data as described in this Privacy Notice or as required by law.<br><br>
+            <b>Our Services are not intended for children</b>. Our Services are meant for adults and are not for children. We do not intentionally collect Personal Data from children under 13 without authorization from a parent or legal guardian. If you think your child under 13 has sent us data, you can contact us at compliance@onbe.com.<br><br>
+            <b>Our Services may link to third-party services that we do not manage</b>. If you click a link to a third-party website, you will be taken to sites that we do not control. This Privacy Notice does not apply to the privacy practices of those websites. Please read the privacy notice of those websites. We are not liable for these third-party practices.<br><br>
+            <b>This Privacy Notice may be updated at any time</b>. We may change our Privacy Notice from time to time. We may inform you of any changes to our Privacy Notice as required by law. Please check the Website periodically for updates. <u>This Privacy Notice was last modified on 03/2021.</u><br><br>
+            <b>To contact us</b>, if you have additional questions, concerns or wish to file a complaint regarding your Personal Data, you may e-mail our Data Protection Officer at <b>compliance@onbe.com</b>. We are committed to resolving any questions you may have.<br><br>
+        </div>
+    </div>
+</div>
+<div id="privacy-policy-backdrop-modal" class="backdrop-modal close-privacy-policy-modal" style="display: none;"></div>
+<script defer="" language="javascript" type="text/javascript" src="./Getting Started _ API Simplified_files/cookie-helper.js.download"></script>
+<script defer="" language="javascript" type="text/javascript" src="./Getting Started _ API Simplified_files/privacy-box.js.download"></script>
+
+    
+<script src="./Getting Started _ API Simplified_files/popper.min.js.download" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="./Getting Started _ API Simplified_files/bootstrap.min.js.download" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="./Getting Started _ API Simplified_files/main.min.2f1e0e298be76da7419a91735c9fe44c5244dc1a3e5bb32a1cb09840cbdfbbcb.js.download" integrity="sha256-Lx4OKYvnbadBmpFzXJ/kTFJE3Bo+W7MqHLCYQMvfu8s=" crossorigin="anonymous"></script>
+
+
+
+
+    <script>
+      window.onUsersnapCXLoad = function(api) {
+        api.init();
+        api.on('open', function(event) {
+            event.api.setValue('visitor', localStorage.getItem("email"));
+        });
+      }
+      var script = document.createElement('script');
+      script.async = 1;
+      script.src = 'https://widget.usersnap.com/load/51d05707-7d9f-4ddf-b0ea-00ed07040ca7?onload=onUsersnapCXLoad';
+      document.getElementsByTagName('head')[0].appendChild(script);
+    </script>
+  
+<!--uspssb--><iframe name="us-entrypoint-setup" title="Usersnap Feedback" style="display: none; height: 0px; width: 0px; z-index: 2147483647; color-scheme: normal;" src="./Getting Started _ API Simplified_files/saved_resource.html"></iframe><!--uspsse--><!--uspssb--><iframe name="us-entrypoint-buttonV2" title="Usersnap Feedback" class="us–style-manager-1buttonIframe1637008516082 us–style-manager-2sizedIframe1637008516082" id="us–style-manager-1buttonIframe1637008516082" style="display: none; height: 0px; width: 0px; z-index: 2147483647; color-scheme: normal;" src="./Getting Started _ API Simplified_files/saved_resource(1).html"></iframe><!--uspsse--><style type="text/css"></style><style type="text/css"></style></body></html>
