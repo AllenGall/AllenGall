@@ -1,10 +1,13 @@
-- 👋 Hi, I’m @AllenGall
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+@AllenGall
 
-<!---
-AllenGall/AllenGall is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+Senior technical writer in the Chicagoland.  
+
+Interested in...
+-docs as code
+-Agile development processes 
+-knowledge management and architecture 
+-knowledge taxonomies
+-AI and how it can help content generation and discovery
+-APIs and how to document them 
+-Diagramming networks, systems, and processes
+
