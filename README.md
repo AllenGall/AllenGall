@@ -9,5 +9,9 @@ Interested in...\
 -knowledge taxonomies\
 -AI and how it can help content generation and discovery\
 -APIs and how to document them\
--Diagramming networks, systems, and processes
+-Diagramming networks, systems, and processes\
+-Interesting new tools to help with all of the above\
+
+www.allen-gall.com
+
 
